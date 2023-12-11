@@ -17,6 +17,7 @@ export class SaveMessageUseCase {
 
   async execute(): Promise<void> {
     const messages = await this.messageConsumer.startConsuming();
+    console.log(messages.length);
 
     Promise.all(
       messages.map(async (message) => {

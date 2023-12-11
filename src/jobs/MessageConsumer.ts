@@ -1,3 +1,4 @@
+/* eslint-disable no-async-promise-executor */
 import { Message } from "@prisma/client";
 import * as amqp from "amqplib";
 
@@ -23,7 +24,6 @@ export class MessageConsumer implements IMessageConsumer {
         (msg) => {
           if (msg) {
             const message = JSON.parse(msg.content.toString()) as Message;
-            console.log("[x] Received message:", message);
             messages.push(message);
           }
         },

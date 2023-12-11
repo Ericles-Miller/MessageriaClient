@@ -1,3 +1,4 @@
+/* eslint-disable no-await-in-loop */
 import "reflect-metadata";
 import { SaveMessagesController } from "@modules/Messages/SaveMessages/SaveMessagesController";
 
@@ -6,7 +7,7 @@ async function startScript() {
 
   const saveMessagesController = new SaveMessagesController();
 
-  console.log("aaaaaaaa");
+  console.log(" ");
 
   while (true) {
     try {
